@@ -160,6 +160,7 @@
             this.roundPB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.roundPB1.TabIndex = 0;
             this.roundPB1.TabStop = false;
+            this.roundPB1.Click += new System.EventHandler(this.roundPB1_Click);
             // 
             // MenuPrincipal
             // 

@@ -12,11 +12,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static TCC.ClassicMode;
+using static TCC.Form4;
 
 namespace TCC
 {
-    public partial class ClassicMode : Form
+    public partial class Form4 : Form
     {
         // Definir variáveis do jogador, dealer e o valor da aposta
         private Player player;
@@ -28,12 +28,13 @@ namespace TCC
         private static readonly HttpClient client = new HttpClient();
         private string deckId;
         private bool betdone = false;
-        int action = 0;
+        int action = 1;
         int playerScore = 0;
+        int dealerScore = 0;
 
         private const int DEAL_TIME = 300;
 
-        public ClassicMode()
+        public Form4()
         {
             InitializeComponent();
             player = new Player { Balance = Form1.UsuarioAtual.DinheiroUsuario }; // Exemplo de saldo inicial
@@ -42,28 +43,24 @@ namespace TCC
             shufflesfx = new SoundPlayer("C:\\Users\\danil\\source\\repos\\BlackjackGame2\\BlackjackGame2\\shufflecards.sfx.wav");
             Dinheiro.Value = Form1.UsuarioAtual.DinheiroUsuario;
         }
-
-        private void ClassicMode_Load(object sender, EventArgs e)
-        {
-        }
-
         // Inicia uma nova rodada
         private async void StartNewGame()
         {
             Playerscore.Text = "Sua pontuação:";
             Dealerscore.Text = "Pontuação do dealer:";
             playerScore = 0;
+            dealerScore = 0;
+            action = 1;
             deckId = await CreateDeck();
-            cartadealer1.Image = null; cartadealer2.Image = null; cartadealer3.Image = null; cartadealer4.Image = null; cartadealer5.Image = null;
-            cartaplayer1.Image = null; cartaplayer2.Image = null; cartaplayer3.Image = null; cartaplayer4.Image = null; cartaplayer5.Image = null;
-            cartadealer1.Visible = false; cartadealer2.Visible = false; cartadealer3.Visible = false; cartadealer4.Visible = false; cartadealer5.Visible = false;
-            cartaplayer1.Visible = false; cartaplayer2.Visible = false; cartaplayer3.Visible = false; cartaplayer4.Visible = false; cartaplayer5.Visible = false;
+            cartadealer1.Image = null; cartadealer2.Image = null;
+            cartaplayer1.Image = null; cartaplayer2.Image = null;
+            cartadealer1.Visible = false; cartadealer2.Visible = false;
+            cartaplayer1.Visible = false; cartaplayer2.Visible = false;
             if (betdone == false)
             {
                 MessageBox.Show("Novo jogo! Faça suas apostas antes de começar.");
                 Aposta.Enabled = true;
                 Hitbtn.Enabled = false;
-                Standbtn.Enabled = false;
                 Doublebtn.Enabled = false;
 
             }
@@ -98,34 +95,21 @@ namespace TCC
         {
             drawcardsfx = new SoundPlayer("C:\\Users\\danil\\source\\repos\\BlackjackGame2\\BlackjackGame2\\drawcard.sfx.wav");
             Hitbtn.Enabled = true;
-            Standbtn.Enabled = true;
             Doublebtn.Enabled = true;
-            action = 0;
             player.PlayerHand.Cards.Clear();
             dealer.DealerHand.Cards.Clear();
-            
+
             player.PlayerHand.Cards.Add(await DrawCard()); cartaplayer1.Visible = true;
             cartaplayer1.Load(player.PlayerHand.Cards[0].ImageUrl); this.Update(); Thread.Sleep(DEAL_TIME);
             dealer.DealerHand.Cards.Add(await DrawCard()); cartadealer1.Visible = true;
             cartadealer1.Load(dealer.DealerHand.Cards[0].ImageUrl); this.Update(); Thread.Sleep(DEAL_TIME);
-            player.PlayerHand.Cards.Add(await DrawCard()); cartaplayer2.Visible = true;
-            cartaplayer2.Load(player.PlayerHand.Cards[1].ImageUrl); this.Update(); Thread.Sleep(DEAL_TIME);
-            dealer.DealerHand.Cards.Add(await DrawCard()); cartadealer2.Visible = true;
-            ShowCardBack(cartadealer2);
-            //int dealerScore = scoreManager.CalculateHandValue(dealer.DealerHand.Cards);
-            Dealerscore.Text = $"Pontuação do dealer: ?";
+            dealerScore = scoreManager.CalculateHandValue(dealer.DealerHand.Cards);
+            Dealerscore.Text = $"Pontuação do dealer: {dealerScore}";
 
             playerScore = scoreManager.CalculateHandValue(player.PlayerHand.Cards);
             Playerscore.Text = $"Sua pontuação: {playerScore}";
-            int dealerScore = scoreManager.CalculateHandValue(dealer.DealerHand.Cards);
-            if (playerScore == 21)
-            {
-                MessageBox.Show("BLACKJACK!! Você ganhou");
-                Dinheiro.Value += Aposta.Value * 3 / 2;
-                betdone = false;
-                Aposta.Value = 0;
-                StartNewGame();
-            }
+
+
         }
 
         // Saca uma carta do baralho da API
@@ -145,36 +129,27 @@ namespace TCC
         }
 
         // Verifica o vencedor após o turno do dealer
-        private async void CheckWinner()
+        private void CheckWinner()
         {
-            if (player.PlayerHand.GetTotalValue() > dealer.DealerHand.GetTotalValue() || dealer.DealerHand.GetTotalValue() > 21)
+            if (playerScore > 5)
             {
                 MessageBox.Show("Você ganhou!");
-                AtualizarDinheiro(Dinheiro.Value + (Aposta.Value * 2)); // Atualiza dinheiro com o prêmio
+                AtualizarDinheiro(Dinheiro.Value + (Aposta.Value * 2));
+                betdone = false;
+                Aposta.Value = 0;
+                StartNewGame();
             }
-            else if (player.PlayerHand.GetTotalValue() == dealer.DealerHand.GetTotalValue())
-            {
-                MessageBox.Show("O jogo empatou");
-                AtualizarDinheiro(Dinheiro.Value + Aposta.Value); // Atualiza dinheiro com a aposta devolvida
-            }
-            else
+            else if (dealerScore > 49)
             {
                 MessageBox.Show("O dealer ganhou!");
-                // O dinheiro já foi descontado na aposta, nada a fazer aqui
+                betdone = false;
+                Aposta.Value = 0;
+                StartNewGame();
             }
-            betdone = false;
-            Aposta.Value = 0;
-            StartNewGame();
-
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //Betbtn!! nome bugoukkkk
             
+            
+
         }
-
-
-
         // Representa uma carta
         public class Card
         {
@@ -221,30 +196,18 @@ namespace TCC
             private SoundPlayer drawcardsfx;
 
             // Dealer joga até atingir 17 ou mais
-            public async Task Play(Func<Task<Card>> drawCardFunc, ClassicMode form)
+            public async Task Play(Func<Task<Card>> drawCardFunc, Form4 form)
             {
+                int i;
                 drawcardsfx = new SoundPlayer("C:\\Users\\danil\\source\\repos\\BlackjackGame2\\BlackjackGame2\\drawcard.sfx.wav");
-                while (DealerHand.GetTotalValue() < 17) //adicionar condição para caso for menor que a mão do player
-                {
-
-                    // O dealer saca uma nova carta usando a função fornecida
                     Card newCard = await drawCardFunc();
                     drawcardsfx.Play();
                     Thread.Sleep(1000);
                     DealerHand.Cards.Add(newCard);
 
                     // Atualiza a interface gráfica
-                    if (!form.cartadealer3.Visible)
-                    {
-                        form.cartadealer3.Visible = true;
-                        form.cartadealer3.Load(newCard.ImageUrl);
-                    }
-                    else if (!form.cartadealer4.Visible)
-                    {
-                        form.cartadealer4.Visible = true;
-                        form.cartadealer4.Load(newCard.ImageUrl);
-                    }
-                }
+                        form.cartadealer2.Visible = true;
+                        form.cartadealer2.Load(newCard.ImageUrl);
             }
 
 
@@ -301,83 +264,47 @@ namespace TCC
                     }
                     else if (card.Value == "ACE")
                     {
-                        // Ás pode valer 1 ou 11
-                        aceCount++;
+
                         totalValue += 11; // Inicialmente, considere o Ás como 11
                     }
 
                 }
-
-                // Ajusta os Áses para 1 se a pontuação exceder 21
-                while (totalValue > 21 && aceCount > 0)
-                {
-                    totalValue -= 10; // Considera o Ás como 1
-                    aceCount--;
-                }
-
                 return totalValue;
             }
         }
-
-        private void Doublebtn_Click(object sender, EventArgs e)
+        private async void Hitbtn_Click(object sender, EventArgs e) //hit btn
         {
-           
-
-
-        }
-
-        private void ClassicMode_Load_1(object sender, EventArgs e)
-        {
-
-        }
-        private async void rjButton1_Click(object sender, EventArgs e) //hit btn
-        {
+            Hitbtn.Enabled = false;
+            Doublebtn.Enabled = false;
             ScoreManager scoreManager = new ScoreManager();
             hitsfx.Play();
-            Thread.Sleep(1000);
             drawcardsfx.Play();
-            // O jogador recebe uma nova carta e ela é adicionada à mão
-            player.PlayerHand.Cards.Add(await DrawCard());
-            drawcardsfx.Play();
-            // Atualiza a imagem da nova carta (supondo que seja cartaplayer3, por exemplo)
-            if (action == 0)
-            {
-                cartaplayer3.Visible = true;
-                cartaplayer3.Load(player.PlayerHand.Cards[2].ImageUrl);
-                action++;
-            }
-            else if (action == 1)
-            {
-                cartaplayer3.Visible = true;
-                cartaplayer3.Load(player.PlayerHand.Cards[3].ImageUrl);
-                action++;
-            }
-            else if (action == 2)
-            {
-                cartaplayer5.Visible = true;
-                cartaplayer5.Load(player.PlayerHand.Cards[4].ImageUrl);
-                action++;
-            }
-
-            // Calcula e exibe a nova pontuação do jogador
-            int playerScore = scoreManager.CalculateHandValue(player.PlayerHand.Cards);
+            // Calcula e exibe a nova pontuação do jogador   
+            player.PlayerHand.Cards.Add(await DrawCard()); cartaplayer2.Visible = true; this.Update(); Thread.Sleep(DEAL_TIME);
+            cartaplayer2.Load(player.PlayerHand.Cards[action].ImageUrl); this.Update(); Thread.Sleep(DEAL_TIME);
+            playerScore = scoreManager.CalculateHandValue(player.PlayerHand.Cards);
             Playerscore.Text = $"Sua pontuação: {playerScore}";
-            Thread.Sleep(2500);
-            // Verifica se o jogador estourou (bust)
-            if (player.PlayerHand.IsBust())
-            {
-                MessageBox.Show("Você perdeu! A mão passou de 21.");
-                betdone = false;
-                Aposta.Value = 0;
-                StartNewGame();
-            }
+
+            await dealer.Play(DrawCard, this); // Passa o formulário como parâmetro
+            cartadealer2.Visible = true;
+            cartadealer2.Load(dealer.DealerHand.Cards[action].ImageUrl);
+            action++;
+            dealerScore = scoreManager.CalculateHandValue(dealer.DealerHand.Cards);
+            Dealerscore.Text = $"Pontuação do dealer: {dealerScore}"; this.Update(); Thread.Sleep(3000);
+            // Substituição de imagens
+            cartaplayer1.Image = cartaplayer2.Image;
+            cartadealer1.Image = cartadealer2.Image; this.Update(); 
+            CheckWinner();
+            cartaplayer2.Visible = false; cartadealer2.Visible = false;
+            cartaplayer2.Image = null; cartadealer2.Image = null;
+            Hitbtn.Enabled = false;
+            Doublebtn.Enabled = false;
         }
 
-        private void ClassicMode_Load_2(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
             Aposta.Enabled = true;
             Hitbtn.Enabled = false;
-            Standbtn.Enabled = false;
             Doublebtn.Enabled = false;
         }
         private void AtualizarDinheiroNoBanco(int novoValor)
@@ -442,19 +369,10 @@ namespace TCC
                 {
                     MessageBox.Show("Sua aposta não pode ser alterada até o final da partida!");
                 }
-                
+
             }
             else MessageBox.Show("Insira um valor válido.");
         }
-
-        private async void Standbtn_Click_1(object sender, EventArgs e)
-        {
-            Dealerscore.Text = $"Pontuação do dealer: {scoreManager.CalculateHandValue(dealer.DealerHand.Cards)}";
-            cartadealer2.Load(dealer.DealerHand.Cards[1].ImageUrl);
-            await dealer.Play(DrawCard, this); // Passa o formulário como parâmetro
-            CheckWinner();
-        }
-
         private void Doublebtn_Click_1(object sender, EventArgs e)
         {
             if (Dinheiro.Value / 2 < Aposta.Value)
@@ -466,22 +384,13 @@ namespace TCC
             {
                 Dinheiro.Value -= Aposta.Value;
                 Aposta.Value = Aposta.Value * 2;
-                rjButton1_Click(sender, e);
+                Hitbtn_Click(sender, e);
+                
             }
         }
-
-        private void Dinheiro_ValueChanged(object sender, EventArgs e)
+        private void Dinheiro_ValueChanged_1(object sender, EventArgs e)
         {
             AtualizarDinheiroNoBanco(Convert.ToInt32(Dinheiro.Value));
         }
-        private void ShowCardBack(PictureBox pictureBox)
-        {
-            // URL da imagem do verso da carta
-            string cardBackUrl = "https://deckofcardsapi.com/static/img/back.png";
-
-            // Define a imagem no PictureBox
-            pictureBox.Load(cardBackUrl);
-        }
     }
 }
-

@@ -46,3 +46,5 @@ C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.pdb
 C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.MenuPrincipal.resources
 C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.Form3.resources
 C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.ClassicMode.resources
+C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.Form4.resources
+C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.tutoriais.resources

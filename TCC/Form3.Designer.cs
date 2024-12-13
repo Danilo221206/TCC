@@ -96,6 +96,7 @@
             this.rjButton2.Text = "Speedrun";
             this.rjButton2.TextColor = System.Drawing.Color.SeaShell;
             this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // BtnClassic
             // 

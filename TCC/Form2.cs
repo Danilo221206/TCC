@@ -39,5 +39,10 @@ namespace TCC
             label2.Text = $"Dinheiro: R$ {UsuarioAtual.DinheiroUsuario}";
             MessageBox.Show($"Usuário Atual: {UsuarioAtual.NomeUsuario}, Dinheiro: {UsuarioAtual.DinheiroUsuario}");
         }
+
+        private void roundPB1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

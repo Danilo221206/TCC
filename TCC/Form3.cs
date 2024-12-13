@@ -42,5 +42,12 @@ namespace TCC
             tutoriais tut = new tutoriais(1);
             tut.Show();   
         }
+
+        private void rjButton2_Click(object sender, EventArgs e) //speedrun game
+        {
+            Form4 jogo2 = new Form4();
+            jogo2.Show();
+            this.Close();
+        }
     }
 }

@@ -172,5 +172,10 @@ namespace TCC
         {
 
         }
+
+        private void Admconfig_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

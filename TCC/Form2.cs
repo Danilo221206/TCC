@@ -22,7 +22,7 @@ namespace TCC
         {
             Form1 login= new Form1();
             login.Show();
-            this.Hide();
+            this.Close();
             
         }
 
@@ -30,19 +30,36 @@ namespace TCC
         {
             Form3 Gm = new Form3();
             Gm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void MenuPrincipal_Load_1(object sender, EventArgs e)
         {
             label1.Text = $"Bem-vindo, {UsuarioAtual.NomeUsuario}!";
             label2.Text = $"Dinheiro: R$ {UsuarioAtual.DinheiroUsuario}";
-            MessageBox.Show($"Usuário Atual: {UsuarioAtual.NomeUsuario}, Dinheiro: {UsuarioAtual.DinheiroUsuario}");
+            if(UsuarioAtual.Admin == 1)
+            {
+                admbutton.Enabled = true;
+                admbutton.Visible = true;
+            }
+            else
+            {
+                admbutton.Enabled = false;
+                admbutton.Visible = false;
+            }
+
         }
 
         private void roundPB1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void admbutton_Click(object sender, EventArgs e)
+        {
+            Admconfig admconfig = new Admconfig();
+            admconfig.Show();
+            this.Close();
         }
     }
 }

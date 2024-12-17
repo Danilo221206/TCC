@@ -37,6 +37,7 @@
             this.BtnGM = new TCC.RJButton();
             this.BtnInv = new TCC.RJButton();
             this.roundPB1 = new TCC.RoundPB();
+            this.admbutton = new TCC.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.roundPB1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,12 +163,34 @@
             this.roundPB1.TabStop = false;
             this.roundPB1.Click += new System.EventHandler(this.roundPB1_Click);
             // 
+            // admbutton
+            // 
+            this.admbutton.BackColor = System.Drawing.Color.SteelBlue;
+            this.admbutton.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.admbutton.BorderColor = System.Drawing.Color.Pink;
+            this.admbutton.BorderRadius = 10;
+            this.admbutton.BorderSize = 3;
+            this.admbutton.Enabled = false;
+            this.admbutton.FlatAppearance.BorderSize = 0;
+            this.admbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.admbutton.ForeColor = System.Drawing.Color.White;
+            this.admbutton.Location = new System.Drawing.Point(180, 130);
+            this.admbutton.Name = "admbutton";
+            this.admbutton.Size = new System.Drawing.Size(136, 40);
+            this.admbutton.TabIndex = 9;
+            this.admbutton.Text = "Admin config";
+            this.admbutton.TextColor = System.Drawing.Color.White;
+            this.admbutton.UseVisualStyleBackColor = false;
+            this.admbutton.Visible = false;
+            this.admbutton.Click += new System.EventHandler(this.admbutton_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.ClientSize = new System.Drawing.Size(328, 377);
+            this.Controls.Add(this.admbutton);
             this.Controls.Add(this.rjButton5);
             this.Controls.Add(this.rjButton4);
             this.Controls.Add(this.BtnSts);
@@ -197,5 +220,6 @@
         private RJButton BtnSts;
         private RJButton rjButton4;
         private RJButton rjButton5;
+        private RJButton admbutton;
     }
 }

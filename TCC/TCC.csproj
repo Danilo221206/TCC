@@ -101,6 +101,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admconfig.Designer.cs">
+      <DependentUpon>Admconfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassicMode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="tutoriais.Designer.cs">
       <DependentUpon>tutoriais.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admconfig.resx">
+      <DependentUpon>Admconfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClassicMode.resx">
       <DependentUpon>ClassicMode.cs</DependentUpon>
     </EmbeddedResource>

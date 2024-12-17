@@ -48,3 +48,4 @@ C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.Form3.resources
 C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.ClassicMode.resources
 C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.Form4.resources
 C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.tutoriais.resources
+C:\Users\danil\source\repos\TCC\TCC\obj\Debug\TCC.Admconfig.resources

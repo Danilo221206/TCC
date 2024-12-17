@@ -74,7 +74,7 @@ namespace TCC
             using (MySqlConnection connection = CriarConexao())
             {
 
-                if (string.IsNullOrWhiteSpace(txtNomeUsuario.Text) || string.IsNullOrWhiteSpace(txtSenha.Text))
+                if (string.IsNullOrWhiteSpace(txtNomeUsuario.Text) || string.IsNullOrWhiteSpace(txtSenha.Text)) //string method
                 {
                     MessageBox.Show("Por favor, preencha tanto o nome de usuário quanto a senha.");
                     return; // Interrompe a execução do código para não tentar cadastrar
@@ -84,11 +84,11 @@ namespace TCC
                     
                 {
                     // Verifica se o usuário já existe
-                    string querySelect = "SELECT COUNT(*) FROM Usuario WHERE Nome_Usuario = @nome";
+                    string querySelect = "SELECT COUNT(*) FROM Usuario WHERE Nome_Usuario = @nome"; //@nome é placeholder evita sql injection
                     using (MySqlCommand cmd = new MySqlCommand(querySelect, connection))
                     {
-                        cmd.Parameters.AddWithValue("@nome", nomeUsuario);
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        cmd.Parameters.AddWithValue("@nome", nomeUsuario); //@nome se torna a variavel nomeusuario da txtbox
+                        int count = Convert.ToInt32(cmd.ExecuteScalar()); // ExecuteScalar() é um metodo que retorna 1° valor e linha da consulta sql
                         if (count > 0)
                         {
                             MessageBox.Show("Usuário já existe.");
@@ -109,12 +109,14 @@ namespace TCC
                     // Atualiza a classe UsuarioAtual com os valores cadastrados
                     UsuarioAtual.NomeUsuario = nomeUsuario;
                     UsuarioAtual.DinheiroUsuario = 1000; // Valor padrão do banco
+                    UsuarioAtual.Admin = 0;
 
                     // Abre o menu principal
                     MenuPrincipal menu = new MenuPrincipal();
                     this.Hide();
                     menu.ShowDialog();
-                    
+
+
                 }
                 else if (ToggleCL.Checked) // Login
                 {
@@ -129,7 +131,7 @@ namespace TCC
                             {
                                 string hashArmazenado = reader.GetString(0); // Senha armazenada
                                 int dinheiroUsuario = reader.GetInt32(1); // Dinheiro armazenado
-
+                                int adm = reader.GetInt16(2);
                                 if (VerificarSenha(senhaUsuario, hashArmazenado))
                                 {
                                     MessageBox.Show("Login bem-sucedido!");
@@ -137,11 +139,13 @@ namespace TCC
                                     // Atualiza a classe UsuarioAtual
                                     UsuarioAtual.NomeUsuario = nomeUsuario;
                                     UsuarioAtual.DinheiroUsuario = dinheiroUsuario;
-
+                                    UsuarioAtual.Admin = adm;
                                     // Abre o menu principal
                                     MenuPrincipal menu = new MenuPrincipal();
-                                    this.Hide();
+                                    
+                                    this.Hide();   
                                     menu.ShowDialog();
+                                    
                                     
                                 }
                                 else
@@ -162,6 +166,7 @@ namespace TCC
         {
             public static string NomeUsuario { get; set; }
             public static int DinheiroUsuario { get; set; }
+            public static int Admin { get; set; }   
         }
         private void ToggleCL_CheckedChanged(object sender, EventArgs e)
         {

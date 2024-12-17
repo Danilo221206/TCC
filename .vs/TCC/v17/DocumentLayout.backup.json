@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\danil\\source\\repos\\TCC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\admconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\admconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|C:\\Users\\danil\\source\\repos\\TCC\\tcc\\tutoriais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\tutoriais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\classicmode.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\classicmode.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\classicmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\classicmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\classicmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\classicmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|C:\\Users\\danil\\source\\repos\\TCC\\tcc\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|C:\\Users\\danil\\source\\repos\\TCC\\tcc\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|c:\\users\\danil\\source\\repos\\tcc\\tcc\\admconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6775BEFA-117D-4EE3-92E1-CCD926B1246A}|TCC\\TCC.csproj|solutionrelative:tcc\\admconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,73 +26,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form2.cs",
-              "RelativeDocumentMoniker": "TCC\\Form2.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form2.cs",
-              "RelativeToolTip": "TCC\\Form2.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAApwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:59:22.103Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form3.cs",
-              "RelativeDocumentMoniker": "TCC\\Form3.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form3.cs",
-              "RelativeToolTip": "TCC\\Form3.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAhwDEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T14:42:36.125Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "tutoriais.cs",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\tutoriais.cs",
-              "RelativeDocumentMoniker": "TCC\\tutoriais.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\tutoriais.cs",
-              "RelativeToolTip": "TCC\\tutoriais.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAASwDEAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:59:05.425Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form4.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form4.cs",
-              "RelativeDocumentMoniker": "TCC\\Form4.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form4.cs [Design]*",
-              "RelativeToolTip": "TCC\\Form4.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:14:26.726Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form4.cs",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form4.cs",
-              "RelativeDocumentMoniker": "TCC\\Form4.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form4.cs*",
-              "RelativeToolTip": "TCC\\Form4.cs*",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADMAAAAcAAAAAAAAAA==",
+              "Title": "Admconfig.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Admconfig.cs",
+              "RelativeDocumentMoniker": "TCC\\Admconfig.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Admconfig.cs*",
+              "RelativeToolTip": "TCC\\Admconfig.cs*",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:18:04.037Z",
+              "WhenOpened": "2024-12-17T13:18:19.74Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -122,53 +48,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "TCC\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form1.Designer.cs",
+              "RelativeToolTip": "TCC\\Form1.Designer.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T22:42:15.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClassicMode.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\ClassicMode.Designer.cs",
+              "RelativeDocumentMoniker": "TCC\\ClassicMode.Designer.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\ClassicMode.Designer.cs",
+              "RelativeToolTip": "TCC\\ClassicMode.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T22:42:11.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ClassicMode.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\ClassicMode.cs",
-              "RelativeDocumentMoniker": "TCC\\ClassicMode.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\ClassicMode.cs [Design]",
-              "RelativeToolTip": "TCC\\ClassicMode.cs [Design]",
+              "Title": "Admconfig.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Admconfig.cs",
+              "RelativeDocumentMoniker": "TCC\\Admconfig.cs",
+              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Admconfig.cs [Design]*",
+              "RelativeToolTip": "TCC\\Admconfig.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:36:43.878Z",
+              "WhenOpened": "2024-12-17T12:53:23.745Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClassicMode.cs",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\ClassicMode.cs",
-              "RelativeDocumentMoniker": "TCC\\ClassicMode.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\ClassicMode.cs",
-              "RelativeToolTip": "TCC\\ClassicMode.cs",
-              "ViewState": "AgIAABgBAAAAAAAAAAAAAKcBAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:36:46.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form3.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form3.cs",
-              "RelativeDocumentMoniker": "TCC\\Form3.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form3.cs [Design]",
-              "RelativeToolTip": "TCC\\Form3.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T14:04:51.812Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form1.cs",
-              "RelativeDocumentMoniker": "TCC\\Form1.cs",
-              "ToolTip": "C:\\Users\\danil\\source\\repos\\TCC\\TCC\\Form1.cs",
-              "RelativeToolTip": "TCC\\Form1.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAqwEMAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T15:39:39.304Z",
-              "EditorCaption": ""
             }
           ]
         }
